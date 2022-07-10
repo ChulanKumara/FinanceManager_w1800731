@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinanceManager
 {
-    public partial class Form1 : Form
+    public partial class AddFinance : Form
     {
-        public Form1()
+        public AddFinance()
         {
             InitializeComponent();
         }
