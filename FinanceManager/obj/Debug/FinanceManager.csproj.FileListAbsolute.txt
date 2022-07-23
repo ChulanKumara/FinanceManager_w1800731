@@ -15,3 +15,4 @@ C:\Project\FinanceManager\obj\Debug\FinanceManager.csproj.GenerateResource.cache
 C:\Project\FinanceManager\obj\Debug\FinanceManager.csproj.CoreCompileInputs.cache
 C:\Project\FinanceManager\obj\Debug\FinanceManager.exe
 C:\Project\FinanceManager\obj\Debug\FinanceManager.pdb
+C:\Project\FinanceManager\obj\Debug\FinanceManager.MainMenu.resources

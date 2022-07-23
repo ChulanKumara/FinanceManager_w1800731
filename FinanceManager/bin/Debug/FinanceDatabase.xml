@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="yes"?>
+<FinanceManagerDB xmlns="http://tempuri.org/FinanceManagerDB.xsd">
+  <Contact>
+    <Id>1</Id>
+    <Name>Test </Name>
+    <Type>Payer</Type>
+    <Category>1</Category>
+  </Contact>
+  <Contact>
+    <Id>2</Id>
+    <Name>Test 344</Name>
+    <Type>Payee</Type>
+    <Category>2</Category>
+  </Contact>
+  <Finance>
+    <Id>1</Id>
+    <Name>Test 1</Name>
+    <Type>Expence</Type>
+    <ContactId>1</ContactId>
+    <Amount>213</Amount>
+    <Recurring>true</Recurring>
+    <Date>2022-07-23T00:00:00+05:30</Date>
+  </Finance>
+</FinanceManagerDB>
