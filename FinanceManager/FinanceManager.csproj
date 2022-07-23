@@ -47,22 +47,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddContact.cs">
+    <Compile Include="Views\AddContact.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddContact.Designer.cs">
+    <Compile Include="Views\AddContact.Designer.cs">
       <DependentUpon>AddContact.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddEvent.cs">
+    <Compile Include="Views\AddEvent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEvent.Designer.cs">
+    <Compile Include="Views\AddEvent.Designer.cs">
       <DependentUpon>AddEvent.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddFinance.cs">
+    <Compile Include="Views\AddFinance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddFinance.Designer.cs">
+    <Compile Include="Views\AddFinance.Designer.cs">
       <DependentUpon>AddFinance.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\CommonValues.cs" />
@@ -72,22 +72,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FinanceManagerDB.xsd</DependentUpon>
     </Compile>
-    <Compile Include="GeneratePrediction.cs">
+    <Compile Include="Views\GeneratePrediction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GeneratePrediction.Designer.cs">
+    <Compile Include="Views\GeneratePrediction.Designer.cs">
       <DependentUpon>GeneratePrediction.cs</DependentUpon>
     </Compile>
-    <Compile Include="GenerateReport.cs">
+    <Compile Include="Views\GenerateReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GenerateReport.Designer.cs">
+    <Compile Include="Views\GenerateReport.Designer.cs">
       <DependentUpon>GenerateReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu.cs">
+    <Compile Include="Views\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu.Designer.cs">
+    <Compile Include="Views\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ComboBoxDTO.cs" />
@@ -96,34 +96,34 @@
     <Compile Include="Models\FinanceDetails.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SearchFinance.cs">
+    <Compile Include="Views\SearchFinance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchFinance.Designer.cs">
+    <Compile Include="Views\SearchFinance.Designer.cs">
       <DependentUpon>SearchFinance.cs</DependentUpon>
     </Compile>
-    <Compile Include="WeeklyView.cs">
+    <Compile Include="Views\WeeklyView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WeeklyView.Designer.cs">
+    <Compile Include="Views\WeeklyView.Designer.cs">
       <DependentUpon>WeeklyView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddContact.resx">
+    <EmbeddedResource Include="Views\AddContact.resx">
       <DependentUpon>AddContact.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddEvent.resx">
+    <EmbeddedResource Include="Views\AddEvent.resx">
       <DependentUpon>AddEvent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddFinance.resx">
+    <EmbeddedResource Include="Views\AddFinance.resx">
       <DependentUpon>AddFinance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GeneratePrediction.resx">
+    <EmbeddedResource Include="Views\GeneratePrediction.resx">
       <DependentUpon>GeneratePrediction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GenerateReport.resx">
+    <EmbeddedResource Include="Views\GenerateReport.resx">
       <DependentUpon>GenerateReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu.resx">
+    <EmbeddedResource Include="Views\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -135,10 +135,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SearchFinance.resx">
+    <EmbeddedResource Include="Views\SearchFinance.resx">
       <DependentUpon>SearchFinance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WeeklyView.resx">
+    <EmbeddedResource Include="Views\WeeklyView.resx">
       <DependentUpon>WeeklyView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="FinanceManagerDB.xsc">
