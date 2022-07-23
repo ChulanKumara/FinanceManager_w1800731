@@ -11,6 +11,9 @@ namespace FinanceManager
     public partial class MainMenu : Form
     {
         private FinanceManagerDB financeManagerDB = new FinanceManagerDB();
+        private List<FinanceDetails> financeDetails = null;
+        private List<ContactDetails> contactDetails = null;
+        private List<EventDetails> eventDetails = null;
 
         public MainMenu()
         {
@@ -20,10 +23,6 @@ namespace FinanceManager
                 financeManagerDB.ReadXml("FinanceDatabase.xml");
             }
         }
-
-        private List<FinanceDetails> financeDetails = null;
-        private List<ContactDetails> contactDetails = null;
-        private List<EventDetails> eventDetails = null;
 
         private async void btnAddFinance_Click(object sender, EventArgs e)
         {
@@ -54,6 +53,8 @@ namespace FinanceManager
                 if (await financeModel.SaveFinanceDetails(financeDetails))
                 {
                     MessageBox.Show("Finance Data Successfully Added!!!");
+                    financeManagerDB = new FinanceManagerDB();
+                    File.Delete("FinanceDatabase.xml");
                 }
                 else
                 {
@@ -91,6 +92,8 @@ namespace FinanceManager
                 if (await contactModel.SaveContactDetails(contactDetails))
                 {
                     MessageBox.Show("Contact Data Successfully Added!!!");
+                    financeManagerDB = new FinanceManagerDB();
+                    File.Delete("FinanceDatabase.xml");
                 }
                 else
                 {
@@ -130,6 +133,8 @@ namespace FinanceManager
                 if (await eventModel.SaveEventDetails(eventDetails))
                 {
                     MessageBox.Show("Event Data Successfully Added!!!");
+                    financeManagerDB = new FinanceManagerDB();
+                    File.Delete("FinanceDatabase.xml");
                 }
                 else
                 {
