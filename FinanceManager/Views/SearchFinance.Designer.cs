@@ -151,6 +151,7 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label1);
             this.Name = "SearchFinance";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Search Finance";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

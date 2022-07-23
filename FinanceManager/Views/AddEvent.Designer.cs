@@ -216,6 +216,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddEvent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Event";
             ((System.ComponentModel.ISupportInitialize)(this.gvEvent)).EndInit();
             this.ResumeLayout(false);

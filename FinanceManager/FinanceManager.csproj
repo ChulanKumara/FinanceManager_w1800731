@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,6 +56,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\ContactModel.cs" />
+    <Compile Include="Business\EventModel.cs" />
+    <Compile Include="Business\FinanceModel.cs" />
+    <Compile Include="DB\Contact.cs">
+      <DependentUpon>FinancialManagerDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Event.cs">
+      <DependentUpon>FinancialManagerDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Finance.cs">
+      <DependentUpon>FinancialManagerDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\FinancialManagerDatabase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinancialManagerDatabase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\FinancialManagerDatabase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinancialManagerDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\FinancialManagerDatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinancialManagerDatabase.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Views\AddContact.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,7 +103,7 @@
     </Compile>
     <Compile Include="Common\CommonValues.cs" />
     <Compile Include="Common\Enums.cs" />
-    <Compile Include="FinanceManagerDB.Designer.cs">
+    <Compile Include="DB\FinanceManagerDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FinanceManagerDB.xsd</DependentUpon>
@@ -141,17 +177,25 @@
     <EmbeddedResource Include="Views\WeeklyView.resx">
       <DependentUpon>WeeklyView.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="FinanceManagerDB.xsc">
+    <None Include="DB\FinanceManagerDB.xsc">
       <DependentUpon>FinanceManagerDB.xsd</DependentUpon>
     </None>
-    <None Include="FinanceManagerDB.xsd">
+    <None Include="DB\FinanceManagerDB.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>FinanceManagerDB.Designer.cs</LastGenOutput>
     </None>
-    <None Include="FinanceManagerDB.xss">
+    <None Include="DB\FinanceManagerDB.xss">
       <DependentUpon>FinanceManagerDB.xsd</DependentUpon>
     </None>
+    <EntityDeploy Include="DB\FinancialManagerDatabase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FinancialManagerDatabase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\FinancialManagerDatabase.edmx.diagram">
+      <DependentUpon>FinancialManagerDatabase.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -164,6 +208,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\FinanceManagerDB.edmx.sql" />
+    <Content Include="DB\FinancialManagerDatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FinancialManagerDatabase.Context.cs</LastGenOutput>
+      <DependentUpon>FinancialManagerDatabase.edmx</DependentUpon>
+    </Content>
+    <Content Include="DB\FinancialManagerDatabase.edmx.sql" />
+    <Content Include="DB\FinancialManagerDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FinancialManagerDatabase.cs</LastGenOutput>
+      <DependentUpon>FinancialManagerDatabase.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

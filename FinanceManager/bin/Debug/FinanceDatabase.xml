@@ -2,23 +2,72 @@
 <FinanceManagerDB xmlns="http://tempuri.org/FinanceManagerDB.xsd">
   <Contact>
     <Id>1</Id>
-    <Name>Test </Name>
+    <Name>ELE</Name>
     <Type>Payer</Type>
     <Category>1</Category>
   </Contact>
   <Contact>
     <Id>2</Id>
-    <Name>Test 344</Name>
+    <Name>Wat</Name>
     <Type>Payee</Type>
     <Category>2</Category>
   </Contact>
   <Finance>
     <Id>1</Id>
-    <Name>Test 1</Name>
+    <Name>Menake</Name>
     <Type>Expence</Type>
     <ContactId>1</ContactId>
-    <Amount>213</Amount>
+    <Amount>11222.12</Amount>
+    <Recurring>true</Recurring>
+    <Date>2022-07-30T00:00:00+05:30</Date>
+  </Finance>
+  <Finance>
+    <Id>2</Id>
+    <Name>Chulan</Name>
+    <Type>Income</Type>
+    <ContactId>2</ContactId>
+    <Amount>11222.12</Amount>
+    <Recurring>true</Recurring>
+    <Date>2022-07-30T00:00:00+05:30</Date>
+  </Finance>
+  <Event>
+    <Id>1</Id>
+    <Name>Test 123</Name>
+    <Description>Test</Description>
+    <Type>Task</Type>
     <Recurring>true</Recurring>
     <Date>2022-07-23T00:00:00+05:30</Date>
-  </Finance>
+  </Event>
+  <Event>
+    <Id>2</Id>
+    <Name>Test 12323</Name>
+    <Description>Test 34</Description>
+    <Type>Appointment</Type>
+    <Recurring>true</Recurring>
+    <Date>2022-07-23T00:00:00+05:30</Date>
+  </Event>
+  <Event>
+    <Id>3</Id>
+    <Name>Test 123wq</Name>
+    <Description>Test</Description>
+    <Type>Task</Type>
+    <Recurring>true</Recurring>
+    <Date>2022-07-23T00:00:00+05:30</Date>
+  </Event>
+  <Event>
+    <Id>4</Id>
+    <Name>Test 12323qw</Name>
+    <Description>Test 34</Description>
+    <Type>Appointment</Type>
+    <Recurring>true</Recurring>
+    <Date>2022-07-23T00:00:00+05:30</Date>
+  </Event>
+  <Event>
+    <Id>5</Id>
+    <Name>Eve 123</Name>
+    <Description>1213</Description>
+    <Type>Task</Type>
+    <Recurring>true</Recurring>
+    <Date>2022-07-23T00:00:00+05:30</Date>
+  </Event>
 </FinanceManagerDB>

@@ -82,6 +82,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
             this.Name = "GeneratePrediction";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Generate Prediction";
             this.ResumeLayout(false);
             this.PerformLayout();

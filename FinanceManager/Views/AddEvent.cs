@@ -43,6 +43,7 @@ namespace FinanceManager
                 {
                     eventDetails.Recurring = false;
                 }
+                eventDetails.Date = Convert.ToDateTime(dpDate.Text);
                 oEventDetails.Add(eventDetails);
                 eventDetails = null;
 

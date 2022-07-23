@@ -1,4 +1,5 @@
-﻿using FinanceManager.Models;
+﻿using FinanceManager.DB;
+using FinanceManager.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;

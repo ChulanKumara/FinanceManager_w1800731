@@ -111,6 +111,7 @@
             this.Controls.Add(this.btnAddEvent);
             this.Controls.Add(this.btnAddFinance);
             this.Name = "MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
             this.ResumeLayout(false);
 

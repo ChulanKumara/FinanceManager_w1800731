@@ -8,6 +8,7 @@ C:\Project\FinanceManager\obj\Debug\FinanceManager.AddEvent.resources
 C:\Project\FinanceManager\obj\Debug\FinanceManager.AddFinance.resources
 C:\Project\FinanceManager\obj\Debug\FinanceManager.GeneratePrediction.resources
 C:\Project\FinanceManager\obj\Debug\FinanceManager.GenerateReport.resources
+C:\Project\FinanceManager\obj\Debug\FinanceManager.MainMenu.resources
 C:\Project\FinanceManager\obj\Debug\FinanceManager.Properties.Resources.resources
 C:\Project\FinanceManager\obj\Debug\FinanceManager.SearchFinance.resources
 C:\Project\FinanceManager\obj\Debug\FinanceManager.WeeklyView.resources
@@ -15,4 +16,8 @@ C:\Project\FinanceManager\obj\Debug\FinanceManager.csproj.GenerateResource.cache
 C:\Project\FinanceManager\obj\Debug\FinanceManager.csproj.CoreCompileInputs.cache
 C:\Project\FinanceManager\obj\Debug\FinanceManager.exe
 C:\Project\FinanceManager\obj\Debug\FinanceManager.pdb
-C:\Project\FinanceManager\obj\Debug\FinanceManager.MainMenu.resources
+C:\Project\FinanceManager\bin\Debug\EntityFramework.dll
+C:\Project\FinanceManager\bin\Debug\EntityFramework.SqlServer.dll
+C:\Project\FinanceManager\bin\Debug\EntityFramework.xml
+C:\Project\FinanceManager\bin\Debug\EntityFramework.SqlServer.xml
+C:\Project\FinanceManager\obj\Debug\FinanceManager.csproj.CopyComplete

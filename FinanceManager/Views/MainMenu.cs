@@ -1,4 +1,6 @@
-﻿using FinanceManager.Models;
+﻿using FinanceManager.Business;
+using FinanceManager.DB;
+using FinanceManager.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,7 +25,7 @@ namespace FinanceManager
         private List<ContactDetails> contactDetails = null;
         private List<EventDetails> eventDetails = null;
 
-        private void btnAddFinance_Click(object sender, EventArgs e)
+        private async void btnAddFinance_Click(object sender, EventArgs e)
         {
             try
             {
@@ -47,7 +49,16 @@ namespace FinanceManager
                 }
 
                 financeManagerDB.WriteXml("FinanceDatabase.xml");
-                MessageBox.Show("Finance Data Successfully Added!!!");
+
+                FinanceModel financeModel = new FinanceModel();
+                if (await financeModel.SaveFinanceDetails(financeDetails))
+                {
+                    MessageBox.Show("Finance Data Successfully Added!!!");
+                }
+                else
+                {
+                    MessageBox.Show("Something Went Wrong!!!");
+                }
             }
             catch (Exception ex)
             {
@@ -55,7 +66,7 @@ namespace FinanceManager
             }
         }
 
-        private void btnAddContact_Click(object sender, EventArgs e)
+        private async void btnAddContact_Click(object sender, EventArgs e)
         {
             try
             {
@@ -76,7 +87,15 @@ namespace FinanceManager
 
                 financeManagerDB.WriteXml("FinanceDatabase.xml");
 
-                MessageBox.Show("Conytact Data Successfully Added!!!");
+                ContactModel contactModel = new ContactModel();
+                if (await contactModel.SaveContactDetails(contactDetails))
+                {
+                    MessageBox.Show("Contact Data Successfully Added!!!");
+                }
+                else
+                {
+                    MessageBox.Show("Something Went Wrong!!!");
+                }
             }
             catch (Exception ex)
             {
@@ -84,7 +103,7 @@ namespace FinanceManager
             }
         }
 
-        private void btnAddEvent_Click(object sender, EventArgs e)
+        private async void btnAddEvent_Click(object sender, EventArgs e)
         {
             try
             {
@@ -107,7 +126,15 @@ namespace FinanceManager
 
                 financeManagerDB.WriteXml("FinanceDatabase.xml");
 
-                MessageBox.Show("Event Data Successfully Added!!!");
+                EventModel eventModel = new EventModel();
+                if (await eventModel.SaveEventDetails(eventDetails))
+                {
+                    MessageBox.Show("Event Data Successfully Added!!!");
+                }
+                else
+                {
+                    MessageBox.Show("Something Went Wrong!!!");
+                }
             }
             catch (Exception ex)
             {

@@ -171,6 +171,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddContact";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Contact";
             ((System.ComponentModel.ISupportInitialize)(this.gvContact)).EndInit();
             this.ResumeLayout(false);
