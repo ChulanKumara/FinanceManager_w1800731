@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,8 +47,12 @@
             this.gvFinanceData = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.gbType = new System.Windows.Forms.GroupBox();
+            this.epName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epAmount = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gvFinanceData)).BeginInit();
             this.gbType.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epAmount)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -117,6 +122,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(236, 23);
             this.txtName.TabIndex = 6;
+            this.txtName.Validating += new System.ComponentModel.CancelEventHandler(this.txtName_Validating);
             // 
             // dtpDate
             // 
@@ -129,6 +135,7 @@
             // rbIncome
             // 
             this.rbIncome.AutoSize = true;
+            this.rbIncome.Checked = true;
             this.rbIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbIncome.Location = new System.Drawing.Point(6, 19);
             this.rbIncome.Name = "rbIncome";
@@ -146,7 +153,6 @@
             this.rbExpence.Name = "rbExpence";
             this.rbExpence.Size = new System.Drawing.Size(80, 21);
             this.rbExpence.TabIndex = 9;
-            this.rbExpence.TabStop = true;
             this.rbExpence.Text = "Expence";
             this.rbExpence.UseVisualStyleBackColor = true;
             // 
@@ -162,10 +168,13 @@
             // txtAmount
             // 
             this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmount.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtAmount.Location = new System.Drawing.Point(117, 153);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(236, 23);
             this.txtAmount.TabIndex = 11;
+            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtAmount.Validating += new System.ComponentModel.CancelEventHandler(this.txtAmount_Validating);
             // 
             // chkRecurring
             // 
@@ -227,6 +236,14 @@
             this.gbType.TabIndex = 17;
             this.gbType.TabStop = false;
             // 
+            // epName
+            // 
+            this.epName.ContainerControl = this;
+            // 
+            // epAmount
+            // 
+            this.epAmount.ContainerControl = this;
+            // 
             // AddFinance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +272,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvFinanceData)).EndInit();
             this.gbType.ResumeLayout(false);
             this.gbType.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epAmount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,5 +299,7 @@
         private System.Windows.Forms.DataGridView gvFinanceData;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.GroupBox gbType;
+        private System.Windows.Forms.ErrorProvider epName;
+        private System.Windows.Forms.ErrorProvider epAmount;
     }
 }

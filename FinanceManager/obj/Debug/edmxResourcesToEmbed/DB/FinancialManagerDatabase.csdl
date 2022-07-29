@@ -22,9 +22,10 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ContactId" Type="Int32" Nullable="false" />
     <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <Property Name="Amount" Type="Double" Nullable="false" />
+    <Property Name="Type" Type="String" Nullable="false" />
     <Property Name="Recurring" Type="Boolean" Nullable="false" />
     <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Amount" Type="Double" Nullable="false" />
   </EntityType>
   <EntityType Name="Event">
     <Key>

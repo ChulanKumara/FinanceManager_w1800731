@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +44,11 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.gvEvent = new System.Windows.Forms.DataGridView();
+            this.epName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epDescription = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gvEvent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epDescription)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -103,6 +108,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(200, 23);
             this.txtName.TabIndex = 5;
+            this.txtName.Validating += new System.ComponentModel.CancelEventHandler(this.txtName_Validating);
             // 
             // txtDescription
             // 
@@ -111,10 +117,12 @@
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(200, 23);
             this.txtDescription.TabIndex = 6;
+            this.txtDescription.Validating += new System.ComponentModel.CancelEventHandler(this.txtDescription_Validating);
             // 
             // rbTask
             // 
             this.rbTask.AutoSize = true;
+            this.rbTask.Checked = true;
             this.rbTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbTask.Location = new System.Drawing.Point(141, 161);
             this.rbTask.Name = "rbTask";
@@ -194,6 +202,14 @@
             this.gvEvent.Size = new System.Drawing.Size(369, 206);
             this.gvEvent.TabIndex = 17;
             // 
+            // epName
+            // 
+            this.epName.ContainerControl = this;
+            // 
+            // epDescription
+            // 
+            this.epDescription.ContainerControl = this;
+            // 
             // AddEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,6 +235,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Event";
             ((System.ComponentModel.ISupportInitialize)(this.gvEvent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epDescription)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +259,7 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView gvEvent;
+        private System.Windows.Forms.ErrorProvider epName;
+        private System.Windows.Forms.ErrorProvider epDescription;
     }
 }

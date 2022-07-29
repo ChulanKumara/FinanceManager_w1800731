@@ -78,6 +78,7 @@
             this.btnSearchFinance.TabIndex = 3;
             this.btnSearchFinance.Text = "Search Finance";
             this.btnSearchFinance.UseVisualStyleBackColor = true;
+            this.btnSearchFinance.Click += new System.EventHandler(this.btnSearchFinance_Click);
             // 
             // btnGenerateReport
             // 
@@ -88,6 +89,7 @@
             this.btnGenerateReport.TabIndex = 4;
             this.btnGenerateReport.Text = "Generate Report";
             this.btnGenerateReport.UseVisualStyleBackColor = true;
+            this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
             // 
             // btnGeneratePrediction
             // 

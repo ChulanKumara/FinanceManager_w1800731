@@ -17,9 +17,10 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="ContactId" ColumnName="ContactId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
           <ScalarProperty Name="Recurring" ColumnName="Recurring" />
           <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

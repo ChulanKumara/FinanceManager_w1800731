@@ -52,26 +52,59 @@ namespace FinanceManager
         {
             try
             {
-                ContactDetails contactDetails = new ContactDetails();
-                contactDetails.Name = txtName.Text;
-                if (rbPayee.Checked)
+                if (ValidateChildren(ValidationConstraints.Enabled))
                 {
-                    contactDetails.Type = rbPayee.Text;
-                }
-                else if (rbPayer.Checked)
-                {
-                    contactDetails.Type = rbPayer.Text;
-                }
-                contactDetails.Catogery = Convert.ToInt32(cmbCategory.SelectedValue);
-                oContactDetails.Add(contactDetails);
-                contactDetails = null;
+                    ContactDetails contactDetails = new ContactDetails();
+                    contactDetails.Name = txtName.Text;
+                    if (rbPayee.Checked)
+                    {
+                        contactDetails.Type = rbPayee.Text;
+                    }
+                    else if (rbPayer.Checked)
+                    {
+                        contactDetails.Type = rbPayer.Text;
+                    }
+                    contactDetails.Catogery = Convert.ToInt32(cmbCategory.SelectedValue);
+                    oContactDetails.Add(contactDetails);
+                    contactDetails = null;
 
-                gvContact.DataSource = null;
-                gvContact.DataSource = oContactDetails;
+                    gvContact.DataSource = null;
+                    gvContact.DataSource = oContactDetails;
+                }
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void txtName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                e.Cancel = true;
+                txtName.Focus();
+                epName.SetError(txtName, "Name should not be left blank!");
+            }
+            else
+            {
+                e.Cancel = false;
+                epName.SetError(txtName, "");
+            }
+        }
+
+        private void cmbCategory_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cmbCategory.Text))
+            {
+                e.Cancel = true;
+                cmbCategory.Focus();
+                epName.SetError(cmbCategory, "Category is required!");
+            }
+            else
+            {
+                e.Cancel = false;
+                epName.SetError(cmbCategory, "");
             }
         }
     }

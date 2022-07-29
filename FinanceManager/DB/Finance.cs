@@ -17,8 +17,9 @@ namespace FinanceManager.DB
         public int Id { get; set; }
         public int ContactId { get; set; }
         public string Name { get; set; }
-        public double Amount { get; set; }
+        public string Type { get; set; }
         public bool Recurring { get; set; }
         public System.DateTime Date { get; set; }
+        public double Amount { get; set; }
     }
 }

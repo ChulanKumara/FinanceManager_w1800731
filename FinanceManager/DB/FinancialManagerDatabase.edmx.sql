@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 07/23/2022 18:51:58
+-- Date Created: 07/27/2022 20:13:27
 -- Generated from EDMX file: C:\Project\FinanceManager\DB\FinancialManagerDatabase.edmx
 -- --------------------------------------------------
 
@@ -25,11 +25,11 @@ GO
 IF OBJECT_ID(N'[dbo].[Contacts]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Contacts];
 GO
-IF OBJECT_ID(N'[dbo].[Events]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Events];
-GO
 IF OBJECT_ID(N'[dbo].[Finances]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Finances];
+GO
+IF OBJECT_ID(N'[dbo].[Events]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Events];
 GO
 
 -- --------------------------------------------------
@@ -50,9 +50,10 @@ CREATE TABLE [dbo].[Finances] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [ContactId] int  NOT NULL,
     [Name] nvarchar(max)  NOT NULL,
-    [Amount] float  NOT NULL,
+    [Type] nvarchar(max)  NOT NULL,
     [Recurring] bit  NOT NULL,
-    [Date] datetime  NOT NULL
+    [Date] datetime  NOT NULL,
+    [Amount] float  NOT NULL
 );
 GO
 

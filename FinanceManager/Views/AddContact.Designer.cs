@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSave = new System.Windows.Forms.Button();
             this.brnClear = new System.Windows.Forms.Button();
             this.rbPayee = new System.Windows.Forms.RadioButton();
@@ -39,7 +40,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.gvContact = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.epName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epCategory = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gvContact)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epCategory)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -71,13 +76,13 @@
             this.rbPayee.Name = "rbPayee";
             this.rbPayee.Size = new System.Drawing.Size(66, 21);
             this.rbPayee.TabIndex = 25;
-            this.rbPayee.TabStop = true;
             this.rbPayee.Text = "Payee";
             this.rbPayee.UseVisualStyleBackColor = true;
             // 
             // rbPayer
             // 
             this.rbPayer.AutoSize = true;
+            this.rbPayer.Checked = true;
             this.rbPayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbPayer.Location = new System.Drawing.Point(119, 133);
             this.rbPayer.Name = "rbPayer";
@@ -94,6 +99,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(236, 23);
             this.txtName.TabIndex = 22;
+            this.txtName.Validating += new System.ComponentModel.CancelEventHandler(this.txtName_Validating);
             // 
             // label3
             // 
@@ -123,6 +129,7 @@
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(236, 24);
             this.cmbCategory.TabIndex = 31;
+            this.cmbCategory.Validating += new System.ComponentModel.CancelEventHandler(this.cmbCategory_Validating);
             // 
             // label2
             // 
@@ -153,6 +160,14 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // epName
+            // 
+            this.epName.ContainerControl = this;
+            // 
+            // epCategory
+            // 
+            this.epCategory.ContainerControl = this;
+            // 
             // AddContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,6 +189,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Contact";
             ((System.ComponentModel.ISupportInitialize)(this.gvContact)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epCategory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +209,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView gvContact;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ErrorProvider epName;
+        private System.Windows.Forms.ErrorProvider epCategory;
     }
 }

@@ -27,9 +27,10 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ContactId" Type="int" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Amount" Type="float" Nullable="false" />
+    <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Recurring" Type="bit" Nullable="false" />
     <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Amount" Type="float" Nullable="false" />
   </EntityType>
   <EntityType Name="Events">
     <Key>
@@ -68,9 +69,10 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ContactId" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Amount" Type="Double" Nullable="false" />
+          <Property Name="Type" Type="String" Nullable="false" />
           <Property Name="Recurring" Type="Boolean" Nullable="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Amount" Type="Double" Nullable="false" />
         </EntityType>
         <EntityType Name="Event">
           <Key>
@@ -105,9 +107,10 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="ContactId" ColumnName="ContactId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
           <ScalarProperty Name="Recurring" ColumnName="Recurring" />
           <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

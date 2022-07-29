@@ -22,9 +22,10 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ContactId" Type="int" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Amount" Type="float" Nullable="false" />
+    <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Recurring" Type="bit" Nullable="false" />
     <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Amount" Type="float" Nullable="false" />
   </EntityType>
   <EntityType Name="Events">
     <Key>
